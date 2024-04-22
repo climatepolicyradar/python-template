@@ -8,3 +8,10 @@ endif
 uninstall_trunk:
 	sudo rm -if `which trunk`
 	rm -ifr ${HOME}/.cache/trunk
+
+git_hooks: install_trunk
+	trunk actions run configure-pyright-with-pyenv
+
+check:
+	trunk fmt
+	trunk check
