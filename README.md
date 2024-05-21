@@ -15,6 +15,8 @@ at the root of this project to install locally (works for Mac & Linux systems).
 
 1. First things first, find all instances of `REPO_NAME` in this repo and
    replace them with the name of your repository.
+2. Move the [workflows](./workflows) folder under the [.github](./.github/workflows)
+   folder.
 
 ### Configuring Trunk
 
