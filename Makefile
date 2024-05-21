@@ -12,6 +12,11 @@ uninstall_trunk:
 share_trunk:
 	trunk init
 
+move_workflows:
+	mv workflows .github/workflows
+
+init: share_trunk move_workflows
+
 setup_with_pyenv:
 	- pyenv deactivate
 	pyenv virtualenv 3.9 REPO_NAME
