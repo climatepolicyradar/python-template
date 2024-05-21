@@ -9,8 +9,18 @@ uninstall_trunk:
 	sudo rm -if `which trunk`
 	rm -ifr ${HOME}/.cache/trunk
 
-git_hooks: install_trunk
-	trunk actions run configure-pyright-with-pyenv
+share_trunk:
+	trunk init
+
+setup_with_pyenv:
+	- pyenv deactivate
+	pyenv virtualenv 3.9 REPO_NAME
+	pyenv activate REPO_NAME
+	poetry install
+
+install_git_hooks: install_trunk
+	trunk init
+	trunk actions run configure-pyright
 
 check:
 	trunk fmt

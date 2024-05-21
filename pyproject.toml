@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "repo_name"
+version = "0.0.0"
+description = ""
+authors = ["CPR-dev-team <tech@climatepolicyradar.org>"]
+license = "Apache 2.0"
+packages = [{ include = "app" }, { include = "src" }, { include = "tests" }]
+
+[tool.pyright]
+include = ["app", "src", "tests"]
+exclude = ["**/__pycache__"]
+pythonVersion = "3.9"
