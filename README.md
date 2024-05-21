@@ -18,7 +18,7 @@ at the root of this project to install locally (works for Mac & Linux systems).
 
 ### Configuring Trunk
 
-Read [trunk.md](trunk.md).
+Read [trunk.md](./docs/trunk.md).
 
 ### Create your virtual environment
 
