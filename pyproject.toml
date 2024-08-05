@@ -9,4 +9,4 @@ packages = [{ include = "app" }, { include = "src" }, { include = "tests" }]
 [tool.pyright]
 include = ["app", "src", "tests"]
 exclude = ["**/__pycache__"]
-pythonVersion = "3.9"
+pythonVersion = "3.10"

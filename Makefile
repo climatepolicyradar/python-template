@@ -19,7 +19,7 @@ init: share_trunk move_workflows
 
 setup_with_pyenv:
 	- pyenv deactivate
-	pyenv virtualenv 3.9 REPO_NAME
+	pyenv virtualenv 3.10 REPO_NAME
 	pyenv activate REPO_NAME
 	poetry install
 
