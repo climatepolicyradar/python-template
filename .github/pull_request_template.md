@@ -1,6 +1,6 @@
 # What's changed?
 
-<!--- Provide a general summary of your changes -->
+- Provide a general summary of your changes
 
 ## Proposed version
 
