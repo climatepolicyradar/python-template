@@ -15,7 +15,7 @@ share_trunk:
 move_workflows:
 	mv workflows .github/workflows
 
-init: share_trunk move_workflows
+init: move_workflows share_trunk
 
 setup_with_pyenv:
 	- pyenv deactivate
