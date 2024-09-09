@@ -17,8 +17,16 @@ move_workflows:
 
 init: move_workflows share_trunk
 
-setup_with_pyenv:
-	- pyenv deactivate
+add_venv_key:
+	@echo "Adding venv key to [tool.pyright] section in pyproject.toml"
+	@awk 'BEGIN { in_section=0 } \
+	/^\[tool.pyright\]/ { in_section=1 } \
+	in_section && /^\[.*\]/ && !/^\[tool.pyright\]/ { in_section=0 } \
+	{ print } \
+	in_section && !/^\[.*\]/ { last_line=NR } \
+	END { if (last_line) { for (i=1; i<=NR; i++) { if (i == last_line) { print "venv = \"REPO_NAME\"" } } } }' pyproject.toml > tmpfile && mv tmpfile pyproject.toml
+
+setup_with_pyenv: add_venv_key
 	pyenv virtualenv 3.10 REPO_NAME
 	pyenv activate REPO_NAME
 	poetry install
