@@ -1,10 +1,6 @@
 {
-  // cSpell Settings
-  // Version of the setting file.  Always 0.2
   "version": "0.2",
-  // language - current active spelling language
   "language": "en-gb",
-  // words - list of words to be always considered correct
   "words": [
     "pyenv",
     "pyright",
@@ -24,13 +20,28 @@
     "hadolint",
     "pycache",
     "retag",
-    "ndeloof"
+    "ndeloof",
+    "pydantic",
+    "pytest",
+    "dotenv",
+    "virtualenvs",
+    "PYTHONPATH",
+    "markdownlint",
+    "shellcheck",
+    "SCRIPTDIR",
+    "chunksize",
+    "dataframe",
+    "dataframes",
+    "iloc",
+    "iterrows",
+    "notna",
+    "conftest",
+    "capsys",
+    "dtypes",
+    "isin",
+    "pydantic",
+    "getfixturevalue"
   ],
-  // flagWords - list of words to be always considered incorrect
-  // This is useful for offensive words and common spelling errors.
-  // For example "hte" should be "the"
   "flagWords": ["hte"],
-  // Suggestions can sometimes take longer on CI machines,
-  // leading to inconsistent results.
-  "suggestionsTimeout": 5000 // ms
+  "suggestionsTimeout": 5000
 }
