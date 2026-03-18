@@ -57,6 +57,17 @@ jobs:
       - name: Run Tests
         run: echo TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO-TODO
 
+  dependabot:
+    name: Dependabot Auto-pilot
+    if: github.event_name == 'pull_request'
+    needs: [code-quality, test]
+    permissions:
+      pull-requests: write
+      contents: write
+    uses: climatepolicyradar/reusable-workflows/.github/workflows/dependabot-autopilot.yml@v23
+    with:
+      auto-approve: false
+
   build:
     if: |
       ! cancelled() && always() &&
